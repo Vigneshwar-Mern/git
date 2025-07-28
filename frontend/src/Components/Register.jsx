@@ -10,11 +10,14 @@ function Register() {
 
   const registeruser = async () => {
     try {
-      await axios.post("http://localhost:5000/auth/register", {
-        username,
-        email,
-        password,
-      });
+      await axios.post(
+        "https://login-backend-x6tf.onrender.com/auth/register",
+        {
+          username,
+          email,
+          password,
+        }
+      );
       alert("Registration successful!");
       navigate("/login");
     } catch (err) {
